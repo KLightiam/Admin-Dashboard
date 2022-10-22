@@ -1,0 +1,252 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 2fr 7fr;
+    grid-template-areas: 
+    'dashboard header'
+    'dashboard main';
+}
+
+.header{
+    grid-area: header;
+    /* background-color: whitesmoke; */
+    background-color: cadetblue;
+    display:grid;
+    grid-template-columns: 6fr 4fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    'search profile'
+    'greeting buttons';
+    font-size: 1.5rem;
+    /* padding-left: 1.5rem; */
+}
+
+.header .search{
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+}
+
+.search input{
+    flex-grow: 1;
+    margin-left: 1rem;
+    border-radius: 20px;
+    /* outline-color: none; */
+    /* border-color: none; */
+    padding-left: 1rem;
+    height: 2.2rem;
+}
+
+.header .profile{
+    /* background-color: bisque; */
+    /* background-color: cadetblue; */
+    display: flex;
+    gap:1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile img:last-of-type{
+    border-radius: 35px;
+}
+
+.header .greeting{
+    /* background-color: cadetblue; */
+    display: flex;
+    gap:10px;
+    padding-left: 2rem;
+    /* justify-content: center; */
+    align-items: flex-end;
+    padding-bottom: 1.5rem;
+
+}
+
+.greeting img{
+    border-radius: 50%;
+}
+
+.greeting span{
+    font-size: 1rem;
+}
+
+.header .buttons{
+    /* background-color: darkgoldenrod; */
+    display: flex;
+    gap:2rem;
+    align-items: flex-end;
+    padding-bottom: 1.5rem;
+
+}
+
+.buttons button{
+    height:3rem;
+    width: 6rem;
+    border-radius: 2rem;
+    background-color: rgb(0, 157, 255);
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.dashboard{
+    grid-area: dashboard;
+    background-color: deepskyblue;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    font-size: 2rem;
+    color: aliceblue;
+    /* opacity: 0.9; */
+}
+
+.dashboard-top{
+    display: flex;
+    gap:0.7rem;
+    align-items: center;
+    padding-left: 0.9rem;
+    margin-top: 1.5rem;
+}
+
+.dashboard > div > div {
+    display: flex;
+    /* flex-direction: column; */
+    gap:1.6rem;
+    padding-left: 1.5rem;
+    align-items: center;
+    margin-top: 1rem;
+
+}
+
+.dashboard img{
+    opacity: 0.8;
+    /* background-color: aliceblue; */
+}
+
+.main{
+    grid-area: main;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+    'projects sidebar';
+    gap: 10px;
+    padding: 20px 0px 10px 15px;
+}
+
+.projects{
+    grid-area: projects;
+    height: 100%;
+}
+
+.projects p{
+    margin-bottom: 5px;
+}
+
+.articles{
+    min-height: 90%;
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    /* background-color: honeydew; */
+    background-image: linear-gradient(to right,orange 3%,honeydew 3%,honeydew 100%);
+}
+.article h2{
+    margin:20px 0px 0px 20px;
+}
+
+.article p{
+    padding-left: 20px;
+    /* padding-top: auto; */
+    /* padding-bottom: auto; */
+}
+
+.article-symbols{
+    display:flex;
+    gap:15px;
+    padding-right: 20px;
+    align-items: end;
+    justify-content: end;
+    margin-top: auto;
+    margin-bottom: 20px;
+    /* background-color: aqua; */
+}
+
+.sidebar{
+    grid-area: sidebar;
+    /* display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 92.5%;
+    gap: 20px;
+    padding-right: 1.5rem;
+    color: rgba(0, 0, 0, 0.7);
+    
+    
+}
+
+.announcements > p{
+    margin-bottom: 5px;
+}
+
+.announcement, .trends{
+    background-color: darkgray;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 0px black;
+}
+
+.announcement{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.announcement-info:not(:last-child){
+    border-bottom: 1px solid black;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.announcement-info:last-child{
+    margin: 10px;
+}
+
+.trending > p{
+    margin-bottom: 5px;
+}
+
+.trends{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.trend{
+    display: flex;
+    margin:10px;
+}
+
+.trend img{
+    border-radius: 25px;
+    margin-right: 10px;
+}
